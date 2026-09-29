@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola+ | Acessibilidade Escolar SJC</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- IMPORTAÇÃO SEGURA E ANTECIPADA DA BIBLIOTECA DO SUPABASE -->
+    <<!-- Substitua a linha do script antiga no head por esta versão explícita: -->
+<script src="https://jsdelivr.net"></script>
+>
+</head>
+<body>
+
+    <!-- CABEÇALHO (HEADER) -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="icon"></span> Escola+
+        </div>
+        <nav class="nav-links">
+            <a href="#recursos">Recursos</a>
+            <a href="#equipe">Nossa Equipe</a>
+            <button id="btn-nav-login" class="btn-primary">Entrar</button>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Encontre a escola ideal e acessível para o seu filho</h1>
+            <p> Escola+: Educação acessível e de qualidade para todos!.</p>
+            <button id="btn-hero-buscar" class="btn-cta">BUSCAR ESCOLAS ACESSÍVEIS</button>
+        </div>
+        <div class="hero-image">
+            <div class="visual-avatar"></div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE RECURSOS -->
+    <section id="recursos" class="features-section">
+        <h2>O Escola+ oferece</h2>
+        <div class="grid-features">
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Localização</h3>
+                <p>Encontre as 20 escolas da rede municipal mapeadas in SJC com filtros baseados no seu bairro.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Acompanhamento</h3>
+                <p>Informações detalhadas sobre salas de recursos e suporte pedagógico especializado.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Educação para Todos</h3>
+                <p>Dados precisos sobre rampas, banheiros adaptados, elevadores e rotas acessíveis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO GALERIA DA EQUIPE -->
+    <section id="equipe" class="team-section">
+        <h2>Nossa Equipe</h2>
+        <div class="grid-team">
+            <div class="team-card">
+                <img src="imagens/foto1.jpg" alt="Foto" class="team-photo">
+                <h4>Wallace R.</h4>
+            </div>
+            <div class="team-card">
+                <img src="imagens/foto8.jpg" alt="Foto" class="team-photo">
+                <h4>Sarah L.</h4>
+            </div>
+            <div class="team-card">
+                <img src="imagens/foto3.jpg" alt="Foto" class="team-photo">
+                <h4>João C.</h4>
+            </div>
+            <div class="team-card">
+                <img src="imagens/foto4.jpg" alt="Foto" class="team-photo">
+                <h4>Rafaella F.</h4>
+            </div>
+            <div class="team-card">
+                <img src="imagens/foto5.jpg" alt="Foto" class="team-photo">
+                <h4>Mariana F.S.</h4>
+            </div>
+            <div class="team-card">
+                <img src="imagens/foto6.jpg" alt="Foto" class="team-photo">
+                <h4>Júlia B.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE AUTENTICAÇÃO (LOGIN / CADASTRO) -->
+    <div id="auth-modal" class="modal hidden">
+        <div class="box-cadastro">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2 id="auth-title">Entrar na Conta</h2>
+            
+            <!-- CAMPOS EXCLUSIVOS DE LOGIN -->
+            <div id="login-fields">
+                <input type="text" id="login-identificador" placeholder="Digite seu RA ou CPF">
+                <input type="password" id="login-password" placeholder="Sua senha">
+            </div>
+
+            <!-- CAMPOS EXCLUSIVOS DE CADASTRO -->
+            <div id="cadastro-fields" class="hidden">
+                <div class="form-section-title">Dados de Contato e Acesso</div>
+                <input type="email" id="cad-email" placeholder="E-mail principal">
+                <input type="tel" id="cad-telefone" placeholder="Telefone de contato">
+
+                <div class="form-section-title">Dados do Pai</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="pai-falecido"> Pai falecido / Não consta
+                </label>
+                <div id="bloco-pai">
+                    <input type="text" id="cad-nome-pai" placeholder="Nome completo do pai">
+                    <input type="date" id="cad-nasc-pai" title="Data de nascimento do pai">
+                    <input type="text" id="cad-cpf-pai" placeholder="CPF do pai">
+                </div>
+
+                <div class="form-section-title">Dados da Mãe</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="mae-falecido"> Mãe falecida / Não consta
+                </label>
+                <div id="bloco-mae">
+                    <input type="text" id="cad-nome-mae" placeholder="Nome completo do mãe">
+                    <input type="date" id="cad-nasc-mae" title="Data de nascimento da mãe">
+                    <input type="text" id="cad-cpf-mae" placeholder="CPF da mãe">
+                </div>
+
+                <div class="form-section-title">Dados do Aluno</div>
+                <input type="text" id="cad-nome-aluno" placeholder="Nome completo do aluno">
+                <input type="text" id="cad-ra-aluno" placeholder="RA do aluno">
+                <input type="text" id="cad-cpf-aluno" placeholder="CPF do aluno">
+
+                <div class="form-section-title">Segurança</div>
+                <input type="password" id="cad-password" placeholder="Criar senha">
+                <input type="password" id="cad-password-confirm" placeholder="Confirmar senha">
+            </div>
+            
+            <button id="btn-primary" class="btn-primary">Entrar</button>
+            <p id="toggle-auth">Não tem conta? <span id="toggle-link" style="color: #8A9A5B; cursor: pointer; text-decoration: underline;">Cadastre-se</span></p>
+        </div>
+    </div>
+
+    <!-- TELA INTERNA DO APP (DASHBOARD) -->
+    <div id="app-container" class="box-dashboard hidden">
+        <h2> Bem-vindo ao Painel Escola+</h2>
+        <p>Logado como: <strong id="user-email"></strong></p>
+        <p style="margin-top: 20px; color: #556B2F;">Aqui listaremos as 20 escolas e suas respectivas estruturas de acessibilidade!</p>
+        <button id="btn-logout" class="btn-primary" style="background-color: #c93b3b; margin-top: 30px;">Sair</button>
+    </div>
+
+    <!-- SCRIPT DE LÓGICA LOCAL -->
+    <script src="app.js"></script>
+</body>
+</html>

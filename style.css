@@ -1,0 +1,318 @@
+/* Configurações Gerais */
+:root {
+    --verde-claro: #8A9A5B;
+    --verde-escuro: #556B2F;
+    --branco: #FFFFFF;
+    --cinza-fundo: #F9F9FB;
+    --texto-escuro: #2D3748;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--verde-escuro);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--verde-escuro);
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #3d4e22;
+}
+
+.btn-cta {
+    background-color: var(--verde-claro);
+    color: var(--branco);
+    padding: 15px 32px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(138, 154, 91, 0.3);
+    transition: transform 0.2s;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #f3f5ef 0%, var(--branco) 100%);
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    color: var(--verde-escuro);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #4A5568;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.visual-avatar {
+    font-size: 80px;
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Seção de Recursos */
+.features-section, .team-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.features-section h2, .team-section h2 {
+    font-size: 32px;
+    color: var(--verde-escuro);
+    margin-bottom: 40px;
+}
+
+.grid-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--branco);
+    padding: 40px 30px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid #E2E8F0;
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--verde-escuro);
+}
+
+/* Galeria da Equipe */
+.grid-team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Força exatamente 3 colunas lado a lado */
+    gap: 25px;
+    max-width: 900px; /* Mantém a grade em um tamanho elegante centralizado */
+    margin: 0 auto;
+}
+
+.team-card {
+    background: var(--branco);
+    border: 2px solid var(--verde-claro);
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.team-card:hover {
+    transform: scale(1.03);
+}
+
+/* Estilização para as fotos da equipe */
+.team-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover;  /* Enquadra o rosto sem distorcer */
+    margin-bottom: 15px;
+    border: 3px solid var(--verde-claro);
+    background-color: #f0f0f0; /* Fundo cinza temporário enquanto você não upa as fotos */
+}
+
+.team-card h4 {
+    color: var(--verde-escuro);
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Modais e Caixas Estilizadas */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.box {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 8px;
+    width: 340px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 24px; cursor: pointer;
+}
+
+.box input {
+    width: 100%; padding: 12px; margin: 10px 0;
+    border: 1px solid #CBD5E0; border-radius: 4px;
+}
+
+.box h2 { color: var(--verde-escuro); margin-bottom: 20px; }
+
+/* Dashboard Pós-Login */
+.box-dashboard {
+    max-width: 800px;
+    margin: 100px auto;
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    border-top: 6px solid var(--verde-escuro);
+}
+
+.hidden { display: none !important; }
+
+/* Celular */
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; padding: 40px 5%; }
+    .navbar { padding: 15px 5%; }
+    .nav-links { gap: 15px; }
+}
+/* Customizações para o Novo Formulário de Cadastro */
+.box-cadastro {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 8px;
+    width: 450px;
+    max-height: 85vh;
+    overflow-y: auto; /* Cria barra de rolagem se o formulário crescer */
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.box-cadastro h2 {
+    text-align: center;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+}
+
+.form-section-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--verde-escuro);
+    margin: 15px 0 5px 0;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 3px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #4A5568;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    width: auto !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.disabled-block {
+    opacity: 0.4;
+    pointer-events: none;
+}
