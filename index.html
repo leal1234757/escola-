@@ -142,15 +142,29 @@
         </div>
     </div>
 
-    <!-- TELA INTERNA DO APP (DASHBOARD) -->
-    <div id="app-container" class="box-dashboard hidden">
-        <h2> Bem-vindo ao Painel Escola+</h2>
-        <p>Logado como: <strong id="user-email"></strong></p>
-        <p style="margin-top: 20px; color: #556B2F;">Aqui listaremos as 20 escolas e suas respectivas estruturas de acessibilidade!</p>
-        <button id="btn-logout" class="btn-primary" style="background-color: #c93b3b; margin-top: 30px;">Sair</button>
-    </div>
+   <!-- TELA INTERNA DO APP (DASHBOARD COM FILTROS E ESCOLAS) -->
+<div id="app-container" class="dashboard-container hidden">
+    <header class="dashboard-header">
+        <h2> Painel Escola+ | Filtro de Acessibilidade SJC</h2>
+        <div class="user-info">
+            <span>Olá, <strong id="user-email"></strong></span>
+            <button id="btn-logout" class="btn-logout">Sair</button>
+        </div>
+    </header>
 
-    <!-- SCRIPT DE LÓGICA LOCAL -->
-    <script src="app.js"></script>
-</body>
-</html>
+    <!-- BARRA DE PESQUISA E FILTROS -->
+    <section class="filter-bar">
+        <input type="text" id="search-bairro" placeholder="🔍 Digite a região ou bairro de SJC (ex: Sul, Leste, Satélite)...">
+        <div class="filter-checkboxes">
+            <label><input type="checkbox" id="f-rampa"> Rampas</label>
+            <label><input type="checkbox" id="f-banheiro"> Banheiro Adaptado</label>
+            <label><input type="checkbox" id="f-sala"> Sala de Recursos</label>
+            <label><input type="checkbox" id="f-libras"> Intérprete Libras</label>
+        </div>
+    </section>
+
+    <!-- GRADE ONDE APARECERÃO AS ESCOLAS -->
+    <main class="grid-escolas" id="container-escolas">
+        <!-- As escolas serão injetadas aqui dinamicamente pelo app.js -->
+    </main>
+</div>
