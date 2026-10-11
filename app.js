@@ -1,3 +1,62 @@
+const listaEscolasSJC = [
+    // --- 1. REGIÃO SUL (18 Escolas) ---
+    { nome: "EMEFI Prof. Álvaro Gonçalves", bairro: "Campo dos Alemães", telefone: "(12) 3966-2234", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Moacyr Benedicto de Souza", bairro: "Campo dos Alemães", telefone: "(12) 3966-1544", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Olga Benário Prestes", bairro: "Jardim Satélite", telefone: "(12) 3931-1555", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Mercedes Carnevalli Klein", bairro: "Jardim Satélite", telefone: "(12) 3931-4199", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Professora Maria De Melo", bairro: "Parque Industrial", telefone: "(12) 3931-3593", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Hélio Walter Bevilacqua", bairro: "Jardim República", telefone: "(12) 3939-2310", rampa: true, banheiro: false, sala: true, libras: false },
+    { nome: "EMEFI Profª Norma de Conti Simão", bairro: "Bosque dos Eucaliptos", telefone: "(12) 3916-4448", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Ilson Gomes", bairro: "Jardim Primavera", telefone: "(12) 3937-2299", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Sônia Maria Pereira da Silva", bairro: "Jardim Morumbi", telefone: "(12) 3931-1190", rampa: false, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Chico Triste", bairro: "Jardim São José", telefone: "(12) 3934-2199", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Martha Abib Castanho", bairro: "Jardim Satélite", telefone: "(12) 3931-6677", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Luiza Maria Cavalcanti Guratti", bairro: "Setville", telefone: "(12) 3933-1122", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Maria Antonieta Payar", bairro: "Residencial Pinheirinho", telefone: "(12) 3966-8844", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Therezinha do Menino Jesus d. Nascimento", bairro: "Dom Pedro I", telefone: "(12) 3933-2211", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Dom Pedro de Alcântara", bairro: "Dom Pedro I", telefone: "(12) 3934-9988", rampa: true, banheiro: true, sala: false, libras: false },
+    { nome: "EMEFI Prof. Dorival Monteiro", bairro: "Jardim Colonial", telefone: "(12) 3933-7755", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Dosulina Chenque Chaves de Andrade", bairro: "Altos de Santana II", telefone: "(12) 3931-5544", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Luzia Levina Aparecida Borges", bairro: "Jardim Cruzeiro do Sul", telefone: "(12) 3937-1100", rampa: true, banheiro: true, sala: true, libras: true },
+
+    // --- 2. REGIÃO LESTE (15 Escolas) ---
+    { nome: "EMEFI Profª Maria Amélia Wakamatsu", bairro: "Campos de São José", telefone: "(12) 3912-4775", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Antônio Palma Sobrinho", bairro: "Parque Nova Esperança", telefone: "(12) 3907-1124", rampa: true, banheiro: true, sala: false, libras: true },
+    { nome: "EMEFI Prof. Possidônio José de Freitas", bairro: "Residencial Galo Branco", telefone: "(12) 3905-1911", rampa: true, banheiro: false, sala: true, libras: false },
+    { nome: "EMEFI Prof. Waldemar Ramos", bairro: "Vista Verde", telefone: "(12) 3929-6319", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Palmyra Sant'Anna", bairro: "Vila Industrial", telefone: "(12) 3929-2089", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Henrique Botelho", bairro: "Vila Industrial", telefone: "(12) 3921-9988", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Pedro Mazza", bairro: "Jardim Coqueiros", telefone: "(12) 3907-2211", rampa: true, banheiro: true, sala: false, libras: false },
+    { nome: "EMEFI Profª Mariana Teixeira Cornélio", bairro: "Novo Horizonte", telefone: "(12) 3907-8899", rampa: false, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Hélio Augusto de Souza", bairro: "Jardim Valparaíba", telefone: "(12) 3929-5996", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Mercedes Maria Perotti", bairro: "Jardim Santa Júlia", telefone: "(12) 3902-1244", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Leonor Pereira Nunes Galvão", bairro: "Vila Industrial", telefone: "(12) 3929-4455", rampa: false, banheiro: true, sala: false, libras: false },
+    { nome: "EMEFI Profª Terezinha Araújo", bairro: "Jardim Santa Hermínia", telefone: "(12) 3907-5544", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Luiz Leite", bairro: "Galo Branco", telefone: "(12) 3905-3311", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Maria Gomide de Sousa", bairro: "Jardim São Vicente", telefone: "(12) 3905-2244", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Eunice de Oliveira", bairro: "Jardim Novo Horizonte II", telefone: "(12) 3907-1155", rampa: true, banheiro: true, sala: true, libras: false },
+
+    // --- 3. REGIÃO NORTE (9 Escolas) ---
+    { nome: "EMEFI Profª Ana Berling Macedo", bairro: "Alto da Ponte", telefone: "(12) 3921-6839", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Jacyra Vieira Baracho", bairro: "Santana", telefone: "(12) 3921-9535", rampa: true, banheiro: false, sala: true, libras: true },
+    { nome: "EMEFI Profª Maria Ofélia Veneziani Pedrosa", bairro: "Jardim Telespark", telefone: "(12) 3922-4467", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Vera Babo de Oliveira", bairro: "Altos de Santana", telefone: "(12) 3942-1254", rampa: true, banheiro: true, sala: false, libras: false },
+    { nome: "EMEFI Prof. Sônia Maria Pereira", bairro: "Buquirinha", telefone: "(12) 3921-4470", rampa: false, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Felício Savastano", bairro: "Monte Castelo", telefone: "(12) 3923-4700", rampa: true, banheiro: false, sala: true, libras: false },
+    { nome: "EMEFI Dr. Maurício Anisse Cury", bairro: "Jardim São Dimas", telefone: "(12) 3921-9955", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Áurea Cantinho Rodrigues", bairro: "Jardim Oswaldo Cruz", telefone: "(12) 3921-8765", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Profª Mercedes Rachid Edwards", bairro: "São Francisco Xavier", telefone: "(12) 3926-1144", rampa: true, banheiro: true, sala: true, libras: false },
+
+    // --- 4. REGIÃO OESTE (8 Escolas) ---
+    { nome: "EMEFI Prof. Alcyr da Silva", bairro: "Jardim das Indústrias", telefone: "(12) 3931-4455", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Mário Campolim", bairro: "Vila Betânia", telefone: "(12) 3922-1144", rampa: true, banheiro: false, sala: true, libras: false },
+    { nome: "EMEFI Profª Geraldina Salles de Alencar", bairro: "Jardim Limoeiro", telefone: "(12) 3941-8855", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Prof. Flávio Berling de Macedo", bairro: "Jardim Esplanada", telefone: "(12) 3922-3488", rampa: true, banheiro: true, sala: true, libras: true },
+    { nome: "EMEFI Prof. Nelson Ferreira da Silva", bairro: "Jardim Paulista", telefone: "(12) 3922-9080", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Profª Otacília Madureira de Moura", bairro: "Vila Sanches", telefone: "(12) 3921-7788", rampa: true, banheiro: false, sala: true, libras: false },
+    { nome: "EMEFI Prof. Emmanuel Antônio dos Santos", bairro: "Residencial Frei Galvão", telefone: "(12) 3929-8800", rampa: true, banheiro: true, sala: true, libras: false },
+    { nome: "EMEFI Marechal do Ar Casemiro Montenegro Filho", bairro: "CTA", telefone: "(12) 3947-3311", rampa: true, banheiro: true, sala: true, libras: true }
+];
 // Seletores da Interface
 const authModal = document.getElementById('auth-modal');
 const appContainer = document.getElementById('app-container');
